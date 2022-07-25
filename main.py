@@ -24,3 +24,5 @@ while game_is_on:
     # When player walk through all window its position is reset, and it goes back to starting position.
     if player.ycor() > 260:
         player.reset_player_position()
+        scoreboard.increase_level()
+        scoreboard.write_current_level()
