@@ -12,6 +12,7 @@ player = Player()
 car_manager = CarManager()
 scoreboard = Scoreboard()
 
+# When player press Up arrow turtle will move up.
 screen.listen()
 screen.onkey(player.move_up, "Up")
 

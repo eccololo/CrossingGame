@@ -16,4 +16,5 @@ class Player(Turtle):
         self.goto(STARTING_POSITION)
 
     def move_up(self):
+        """Turtle is moving up when player press Up arrow."""
         self.forward(MOVE_DISTANCE)
