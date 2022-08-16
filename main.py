@@ -28,6 +28,7 @@ while game_is_on:
         player.reset_player_position()
         scoreboard.increase_level()
         scoreboard.write_current_level()
+        car_manager.increase_cars_speed()
 
     # When player hits a car it is game over.
     for car in car_manager.get_all_cars():
