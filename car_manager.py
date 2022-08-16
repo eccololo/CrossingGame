@@ -26,3 +26,6 @@ class CarManager:
         for car in self.all_cars:
             car.backward(STARTING_MOVE_DISTANCE)
 
+    def get_all_cars(self):
+        return self.all_cars
+
