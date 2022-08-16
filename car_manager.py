@@ -19,7 +19,7 @@ class CarManager:
             car.shape("square")
             car.shapesize(stretch_wid=1, stretch_len=2)
             car.penup()
-            car.goto(0, 0)
+            car.goto(290, random.randint(-240, 240))
             self.all_cars.append(car)
 
     def move_car(self):
