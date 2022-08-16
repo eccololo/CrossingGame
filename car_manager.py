@@ -1,7 +1,9 @@
 from turtle import Turtle
 import random
+from scoreboard import Scoreboard
 
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
+
 
 class CarManager:
 
@@ -27,6 +29,16 @@ class CarManager:
     def get_all_cars(self):
         return self.all_cars
 
-    def increase_cars_speed(self):
+    def next_level(self):
         self.car_speed *= 1.2
+
+    def set_new_pos_car(self, car):
+        chance = random.randint(1, 6)
+        if chance == 1:
+            car.goto(290, random.randint(-240, 240))
+        else:
+            # FIXME:
+            #   1. Naprawić tutaj. Coś mi nie clearuje cars.
+            car.clear()
+            self.all_cars.remove(car)
 

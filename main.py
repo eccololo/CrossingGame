@@ -28,11 +28,16 @@ while game_is_on:
         player.reset_player_position()
         scoreboard.increase_level()
         scoreboard.write_current_level()
-        car_manager.increase_cars_speed()
+        car_manager.next_level()
 
-    # When player hits a car it is game over.
     for car in car_manager.get_all_cars():
-        if player.distance(car) <= 25:
+        # When player hits a car it is game over.
+        if player.distance(car) <= 20:
             scoreboard.game_over()
             time.sleep(5)
             game_is_on = False
+
+        # Checking if car is behind left edge of game screen
+        # and putting it position to starting position.
+        if car.xcor() < -300:
+            car_manager.set_new_pos_car(car)
