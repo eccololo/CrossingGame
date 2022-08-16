@@ -16,7 +16,13 @@ class CarManager:
         if chance == 1:
             car = Turtle()
             car.color(random.choice(COLORS))
+            car.shape("square")
             car.shapesize(stretch_wid=1, stretch_len=2)
             car.penup()
+            car.goto(0, 0)
             self.all_cars.append(car)
+
+    def move_car(self):
+        for car in self.all_cars:
+            car.backward(STARTING_MOVE_DISTANCE)
 
