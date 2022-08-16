@@ -32,4 +32,6 @@ while game_is_on:
     # When player hits a car it is game over.
     for car in car_manager.get_all_cars():
         if player.distance(car) <= 25:
+            scoreboard.game_over()
+            time.sleep(5)
             game_is_on = False
